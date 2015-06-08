@@ -139,7 +139,6 @@ table, td, tr {
 .bk-ui-widget-content .bk-ui-state-default,
 .bk-ui-widget-header .bk-ui-state-default {
     border: 1px solid #d3d3d3;
-    background: #e6e6e6;
     font-weight: normal;
     color: #555555;
 }
@@ -151,18 +150,30 @@ table, td, tr {
     color: #222222;
 }
 
+
 /* Custom Slider styling */
 
-.bk-ui-widget-content {
-    padding-top: 10px;
+/* Hide the label and input */
+.bk-hbox > div,
+.bk-hbox > button {
+    float: left;
+    margin-left: 10px;
+}
+
+.bk-hbox > div > input,
+.bk-hbox > div > label {
+    display: none;
+}
+
+.bk-slider-horizontal { 
+    min-width: 400px;
+    padding-top: 15px;
     padding-bottom: 0px;
     border: none;
-    background: #EEEEEE;
-    border-radius: 30px;
 }
 
 .bk-ui-slider .bk-ui-slider-handle {
-    top: -8px;
+    top: -15px;
     width: 60px;
     height: 30px;
     background: #fff;
@@ -171,19 +182,22 @@ table, td, tr {
 
 .bk-ui-slider .bk-ui-slider-handle:focus {
     outline: none;
-    border: 1px dotted #3288bd;
 }
 
-/* Hide the label and input */
-.bk-slider-horizontal { 
-    width: 60%;
-    padding-top: 10px;
-}
-.bk-plot + div {
-    margin-left: 40px;
+
+/*
+ *
+ * PLAY
+ *
+ */ 
+
+.bk-bs-btn {
+    width: 60px;
+    height: 30px;
+    background: #fff;
+    border-radius: 10px;
 }
 
-.bk-plot + div > input,
-.bk-plot + div > label {
-    display: none;
+.bk-bs-btn:focus {
+    outline: none;
 }
