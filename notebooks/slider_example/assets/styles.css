@@ -113,13 +113,11 @@ table, td, tr {
  * SLIDER
  *
 */  
-/* Hide label */
+
 .bk-hbox input,
 .bk-hbox label {
     display: none;
 }
-
-/* Slider defaults */
 
 .bk-ui-widget {
 	font-family: Verdana, Arial, sans-serif;
