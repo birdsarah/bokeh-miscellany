@@ -1,10 +1,26 @@
+/* 
+ * General Theme
+ *
+ */
+.bk-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+  width: 800px; 
+  margin: auto;
+}
+
+
 /*
  *
  * MAIN BOKEH SETUP
  *
  */ 
-.bk-plot-wrapper table tr td, 
-table, td, tr {
+.bk-plot-wrapper table,
+.bk-plot-wrapper tr,
+.bk-plot-wrapper td {
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -114,15 +130,30 @@ table, td, tr {
  *
 */  
 
-.bk-hbox input,
-.bk-hbox label {
+.plotdiv input,
+.plotdiv label {
     display: none;
+}
+
+
+.bk-slider-horizontal {
+  width: 705px;
+  height: 50px;
+  min-width: 200px;
+  margin-top: 20px;
+  margin-left: 55px;
+}
+
+.bk-ui-slider {
+	position: relative;
+	text-align: left;
 }
 
 .bk-ui-widget {
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 1.1em;
 }
+
 .bk-ui-widget-content {
 	border: 1px solid #aaaaaa;
 	background: #ffffff;
@@ -133,20 +164,13 @@ table, td, tr {
 	background: #eeeeee;
 	font-weight: normal;
 }
-.bk-slider-horizontal {
-  width: 705px;
-  height: 50px;
-  min-width: 200px;
-  margin-top: 20px;
-  margin-left: 55px;
-}
-.bk-ui-slider {
-	position: relative;
-	text-align: left;
-}
+
+
+
 .bk-ui-slider-horizontal {
 	height: .8em;
 }
+
 .bk-ui-slider-handle {
 	position: absolute;
 	z-index: 2;
@@ -158,4 +182,8 @@ table, td, tr {
 	-ms-touch-action: none;
 	touch-action: none;
     border-radius: 2px;
+}
+
+.bk-ui-slider .bk-ui-slider-handle:focus {
+    outline: none;
 }
