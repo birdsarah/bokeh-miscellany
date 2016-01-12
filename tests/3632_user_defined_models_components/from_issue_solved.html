@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Embed Example</title>
+        <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.css" type="text/css" />
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.0.min.js"></script>
+        <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-compiler-0.11.0.min.js"></script>
+        
+
+<script type="text/javascript">
+    
+        (function outer(modules, cache, entry) {
+          if (typeof Bokeh !== "undefined") {
+            for (var name in modules) {
+              var module = modules[name];
+        
+              if (typeof(module) === "string") {
+                try {
+                  coffee = Bokeh.require("coffee-script")
+                } catch (e) {
+                  throw new Error("Compiler requested but failed to import. Make sure bokeh-compiler(-min).js was included.")
+                }
+        
+                function compile(code) {
+                  var body = coffee.compile(code, {bare: true, shiftLine: true});
+                  return new Function("require", "module", "exports", body);
+                }
+        
+                modules[name] = [compile(module), {}];
+              }
+            }
+        
+            for (var name in modules) {
+              Bokeh.require.modules[name] = modules[name];
+            }
+        
+            for (var i = 0; i < entry.length; i++) {
+              Bokeh.Collections.register_locations(Bokeh.require(entry[i]));
+            }
+          } else {
+            throw new Error("Cannot find Bokeh. You have to load it prior to loading plugins.");
+          }
+        })({
+         "custom/main":[function(require,module,exports){
+           module.exports = { CustomTileSource: require("custom/custom_tile_source") };
+         }, {}],
+         "custom/custom_tile_source": "\n    _ = require \"underscore\"\n    Util = require \"util/util\"\n    TMSTileSource = require \"renderer/tile/tms_tile_source\"\n    class CustomTileSource extends TMSTileSource.Model\n\n      type: \"CustomTileSource\"\n\n      initialize: () ->\n        @set(\'x_origin_offset\', 0)\n        @set(\'y_origin_offset\', 0)\n        @set(\'initial_resolution\', 134217.728)\n        super\n\n    module.exports =\n      Model: CustomTileSource\n    "
+        }, {}, ["custom/main"]);
+</script>
+        
+<script type="text/javascript">
+    Bokeh.$(function() {
+    var docs_json = {"d00384e1-1374-47b0-96c6-27e32191edde": {"version": "0.11.0", "roots": {"references": [{"id": "885d2d7f-0f8e-4984-9ec8-9a9bc3b22b69", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "PreviewSaveTool"}, {"id": "0b8f8175-3617-4519-9941-a9964aecd6ea", "attributes": {"line_dash": [4, 4], "line_color": {"value": "black"}, "fill_alpha": {"value": 0.5}, "left_units": "screen", "render_mode": "css", "bottom_units": "screen", "right_units": "screen", "line_width": {"value": 2}, "line_alpha": {"value": 1.0}, "top_units": "screen", "level": "overlay", "fill_color": {"value": "lightgrey"}, "plot": null}, "type": "BoxAnnotation"}, {"id": "e5222469-a0a5-40a2-8dc1-279726729720", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}, "formatter": {"id": "68a7f0da-d4ea-40ee-b89a-83bfcac0d0a6", "type": "BasicTickFormatter"}, "ticker": {"id": "73b13fc9-41a9-4a66-9a85-9f347b2d5668", "type": "BasicTicker"}}, "type": "LinearAxis"}, {"id": "f8021c1c-5fbc-479d-bfd9-1b8a9949d2bc", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "ResetTool"}, {"subtype": "Figure", "id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "attributes": {"y_range": {"id": "f54dc842-17d3-4c39-a630-7695c603a97b", "type": "Range1d"}, "plot_width": 800, "tools": [{"id": "da2f7af0-42cf-4552-b835-736e9c83e7ae", "type": "PanTool"}, {"id": "0167615a-3d0d-4195-82dd-cf8f1f08e337", "type": "WheelZoomTool"}, {"id": "8eccf00a-2888-42db-87d3-3934241f29a5", "type": "BoxZoomTool"}, {"id": "885d2d7f-0f8e-4984-9ec8-9a9bc3b22b69", "type": "PreviewSaveTool"}, {"id": "95334451-a09d-4f9f-8922-a96aa8277055", "type": "ResizeTool"}, {"id": "f8021c1c-5fbc-479d-bfd9-1b8a9949d2bc", "type": "ResetTool"}, {"id": "cc067718-7df3-44d7-8d23-573f7f0d0e4a", "type": "HelpTool"}, {"id": "c0e8898c-ad6b-4143-b89a-83e1370aa6e9", "type": "WheelZoomTool"}, {"id": "fd74e604-1183-48ca-8e07-fdd1d65e618f", "type": "PanTool"}], "below": [{"id": "a52bb687-696e-40e2-b430-20ec593eeb65", "type": "LinearAxis"}], "tool_events": {"id": "a4d9da1a-16bc-4335-906a-a202cbddd32c", "type": "ToolEvents"}, "left": [{"id": "e5222469-a0a5-40a2-8dc1-279726729720", "type": "LinearAxis"}], "plot_height": 800, "x_range": {"id": "09362ccf-6183-489a-b7da-41e3c78b390d", "type": "Range1d"}, "renderers": [{"id": "a52bb687-696e-40e2-b430-20ec593eeb65", "type": "LinearAxis"}, {"id": "84546f7e-7b50-4903-be37-1dc94ae56f2f", "type": "Grid"}, {"id": "e5222469-a0a5-40a2-8dc1-279726729720", "type": "LinearAxis"}, {"id": "22326110-fb04-439d-9d3a-3c866adf3ae9", "type": "Grid"}, {"id": "0b8f8175-3617-4519-9941-a9964aecd6ea", "type": "BoxAnnotation"}, {"id": "48f6321a-1cfe-4ccb-afb1-d6a2e94e4f77", "type": "TileRenderer"}]}, "type": "Plot"}, {"id": "22326110-fb04-439d-9d3a-3c866adf3ae9", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}, "dimension": 1, "ticker": {"id": "73b13fc9-41a9-4a66-9a85-9f347b2d5668", "type": "BasicTicker"}}, "type": "Grid"}, {"id": "cc067718-7df3-44d7-8d23-573f7f0d0e4a", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "HelpTool"}, {"id": "ede18117-9f2c-429f-8d44-1ccf1c0c9d9c", "attributes": {}, "type": "BasicTicker"}, {"id": "68a7f0da-d4ea-40ee-b89a-83bfcac0d0a6", "attributes": {}, "type": "BasicTickFormatter"}, {"id": "09362ccf-6183-489a-b7da-41e3c78b390d", "attributes": {"callback": null, "end": 1200}, "type": "Range1d"}, {"id": "da2f7af0-42cf-4552-b835-736e9c83e7ae", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "PanTool"}, {"id": "95334451-a09d-4f9f-8922-a96aa8277055", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "ResizeTool"}, {"id": "c72e2568-e07a-4a8e-ab19-12505ae25ce1", "attributes": {}, "type": "BasicTickFormatter"}, {"id": "f54dc842-17d3-4c39-a630-7695c603a97b", "attributes": {"callback": null, "end": 800}, "type": "Range1d"}, {"id": "94eeedc7-d68a-4269-9bf4-6d93cbe3cb76", "attributes": {"url": "http://localhost:8081/tiles/{filter_size}/{band}/{Z}/{X}/{Y}.png?clim=0.0,70.0", "extra_url_vars": {"band": "0", "filter_size": "1.024"}}, "type": "CustomTileSource"}, {"id": "8eccf00a-2888-42db-87d3-3934241f29a5", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}, "overlay": {"id": "0b8f8175-3617-4519-9941-a9964aecd6ea", "type": "BoxAnnotation"}}, "type": "BoxZoomTool"}, {"id": "c0e8898c-ad6b-4143-b89a-83e1370aa6e9", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "WheelZoomTool"}, {"id": "a52bb687-696e-40e2-b430-20ec593eeb65", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}, "formatter": {"id": "c72e2568-e07a-4a8e-ab19-12505ae25ce1", "type": "BasicTickFormatter"}, "ticker": {"id": "ede18117-9f2c-429f-8d44-1ccf1c0c9d9c", "type": "BasicTicker"}}, "type": "LinearAxis"}, {"id": "a4d9da1a-16bc-4335-906a-a202cbddd32c", "attributes": {}, "type": "ToolEvents"}, {"id": "0167615a-3d0d-4195-82dd-cf8f1f08e337", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "WheelZoomTool"}, {"id": "73b13fc9-41a9-4a66-9a85-9f347b2d5668", "attributes": {}, "type": "BasicTicker"}, {"id": "fd74e604-1183-48ca-8e07-fdd1d65e618f", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}}, "type": "PanTool"}, {"id": "48f6321a-1cfe-4ccb-afb1-d6a2e94e4f77", "attributes": {"tile_source": {"id": "94eeedc7-d68a-4269-9bf4-6d93cbe3cb76", "type": "CustomTileSource"}}, "type": "TileRenderer"}, {"id": "84546f7e-7b50-4903-be37-1dc94ae56f2f", "attributes": {"plot": {"id": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "subtype": "Figure", "type": "Plot"}, "ticker": {"id": "ede18117-9f2c-429f-8d44-1ccf1c0c9d9c", "type": "BasicTicker"}}, "type": "Grid"}], "root_ids": ["7f5d750f-1f20-4975-9534-4e77cc14ab7f"]}, "title": "Bokeh Application"}};
+    var render_items = [{"docid": "d00384e1-1374-47b0-96c6-27e32191edde", "modelid": "7f5d750f-1f20-4975-9534-4e77cc14ab7f", "elementid": "785ac5da-7916-4101-b186-ca97e637b774"}];
+    
+    Bokeh.embed.embed_items(docs_json, render_items);
+});
+</script>
+    </head>
+    <body>
+    
+<div class="plotdiv" id="785ac5da-7916-4101-b186-ca97e637b774"></div>
+    </body>
+</html>
