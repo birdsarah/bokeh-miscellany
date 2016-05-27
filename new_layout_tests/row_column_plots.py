@@ -7,7 +7,7 @@ from bokeh.document import Document
 from bokeh.embed import file_html
 from bokeh.models.glyphs import Line
 from bokeh.models import (
-    Plot, DataRange1d, LinearAxis, ColumnDataSource, Row, Column
+    Plot, DataRange1d, LinearAxis, ColumnDataSource, Row, Column, Title
 )
 from bokeh.resources import INLINE
 
@@ -34,7 +34,16 @@ def make_plot(source, xname, yname, line_color, xdr=None, ydr=None, min_border=1
     if not ydr:
         ydr = DataRange1d()
 
-    plot = Plot(x_range=xdr, y_range=ydr, min_border=min_border, toolbar_location=None, responsive=responsive, plot_width=plot_width, plot_height=plot_height)
+    #title = Title(text='hello world', render_mode='canvas')
+
+    plot = Plot(
+        x_range=xdr, y_range=ydr,
+        min_border=min_border,
+        toolbar_location=None,
+        responsive=responsive,
+        plot_width=plot_width, plot_height=plot_height,
+        title="Plot title",
+    )
 
     if x_axis:
         plot.add_layout(LinearAxis(), 'below')

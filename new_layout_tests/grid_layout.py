@@ -96,7 +96,7 @@ ydr = FactorRange(factors=list(reversed(css3_colors.Name)))
 
 doc = Document()
 #doc.add_root(Column(children=[row1, row2]))
-doc.add_root(GridPlot(children=[[plot1, plot2], [plot3, plot4]], toolbar_location='above', responsive='width_ar'))
+doc.add_root(GridPlot([[plot1, plot2], [plot3, plot4]], toolbar_location='above', responsive='fixed'))
 
 if __name__ == "__main__":
     filename = "grid_layout.html"

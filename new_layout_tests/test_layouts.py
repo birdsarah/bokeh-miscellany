@@ -49,7 +49,11 @@ def add_axes(plot, below_axis=True, left_axis=True, right_axis=False, above_axis
     return plot
 
 
-def make_plot(yname, line_color, tbs=True, above_axis=False, below_axis=True, left_axis=True, right_axis=False, border_fill_color="white", toolbar_location_index=0, plot_width=600, plot_height=300):
+def make_plot(
+    yname, line_color, tbs=True,
+    above_axis=False, below_axis=True, left_axis=True, right_axis=False,
+    border_fill_color="white", toolbar_location_index=0, plot_width=600, plot_height=300
+):
     plot = Plot(
         x_range=DataRange1d(),
         y_range=DataRange1d(),
@@ -59,7 +63,7 @@ def make_plot(yname, line_color, tbs=True, above_axis=False, below_axis=True, le
         plot_height=plot_height,
         min_border=10,
         toolbar_sticky=tbs,
-        responsive='box'
+        responsive='width_ar'
     )
     plot.add_glyph(source, Line(x="x", y=yname, line_color=line_color))
     plot.add_tools(PanTool(), BoxSelectTool(), CrosshairTool(), ResetTool())
@@ -83,9 +87,10 @@ all_tools = plot_3.toolbar.tools + plot_2.toolbar.tools
 toolbar = Toolbar(tools=all_tools)
 
 doc.add_root(
-    Row(
-        ToolbarBox(tools=all_tools, orientation='vertical', merge_tools=True),
-        Column(Row(plot_3, plot_2)),
+    Column(
+        Row(plot_2, plot_3, responsive='width_ar'),
+        Row(plot_4, plot_5, responsive='width_ar'),
+        responsive='width_ar'
     )
 )
 

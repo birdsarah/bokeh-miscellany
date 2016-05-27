@@ -22,6 +22,8 @@ def bollinger():
     p.patch(band_x, band_y, color='#7570B3', fill_alpha=0.2)
 
     p.title = 'Bollinger Bands'
+    p.title_location = 'below'
+    p.title.title_align = 'right'
     p.plot_height = 600
     p.plot_width = 800
     p.grid.grid_line_alpha = 0.4
@@ -63,7 +65,11 @@ def slider():
     offset_slider = Slider(start=-5, end=5, value=0, step=.1, title="Offset", callback=callback)
     callback.args["offset"] = offset_slider
 
-    layout = Row(WidgetBox(amp_slider, freq_slider, phase_slider, offset_slider, responsive='fixed', width=250), plot)
+    layout = Row(
+        WidgetBox(amp_slider, freq_slider, phase_slider, offset_slider, responsive='box'),
+        Column(plot, responsive='box'),
+        responsive='box'
+    )
     return layout
 
 
@@ -80,7 +86,7 @@ def linked_panning():
     s2.circle(x, y2, color="firebrick", size=8, alpha=0.5)
     s3 = figure(tools='pan, box_select', toolbar_location='right', x_range=s1.x_range, responsive='box')
     s3.circle(x, y3, color="olive", size=8, alpha=0.5)
-    layout = Row(s1, s2, s3)
+    layout = Row(s1, s2, s3, responsive='box')
     return layout
 
 
@@ -120,17 +126,18 @@ def lorenz():
     z = solution[:, 2]
     xprime = np.cos(theta) * x - np.sin(theta) * y
     colors = ["#C6DBEF", "#9ECAE1", "#6BAED6", "#4292C6", "#2171B5", "#08519C", "#08306B"]
-    p = figure(title="lorenz example", tools='', toolbar_location=None, responsive='box')
+    p = figure(title="Lorenz example", tools='', toolbar_location=None, responsive='box')
+    p.title_location = 'right'
     p.multi_line(np.array_split(xprime, 7), np.array_split(z, 7), line_color=colors, line_alpha=0.8, line_width=1.5)
 
     return p
 
 
 def lorez_and_linked():
-    return Row(lorenz(), *linked_brushing())
+    return Row(lorenz(), *linked_brushing(), responsive='box')
 
 output_file('megaplot_1.html')
-show(Column(bollinger(), slider(), lorez_and_linked()))
+show(Column(bollinger(), slider(), lorez_and_linked(), responsive='box'))
 
 #output_file('megaplot_2.html')
-#show(Column(bollinger(), slider(), linked_panning()))
+#show(Column(bollinger(), slider(), linked_panning(), responsive='box'))
