@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/css/bokeh.css" type="text/css" />
+<link rel="stylesheet" href="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/css/bokeh-widgets.css" type="text/css" />
+        
+<script type="text/javascript" src="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/js/bokeh.js"></script>
+<script type="text/javascript" src="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/js/bokeh-widgets.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("debug");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="plotdiv" id="1067"></div>
+        </div>
+        
+        <script type="text/javascript">
+            Bokeh.$(function() {
+            var docs_json = {
+              "1066": {
+                "roots": {
+                  "references": [
+                    {
+                      "attributes": {
+                        "below": [
+                          {
+                            "id": "1043",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "left": [
+                          {
+                            "id": "1046",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "renderers": [
+                          {
+                            "id": "1043",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1045",
+                            "type": "Grid"
+                          },
+                          {
+                            "id": "1046",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1048",
+                            "type": "Grid"
+                          },
+                          {
+                            "id": "1055",
+                            "type": "BoxAnnotation"
+                          },
+                          {
+                            "id": "1059",
+                            "type": "GlyphRenderer"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both",
+                        "title": {
+                          "id": "1040",
+                          "type": "Title"
+                        },
+                        "tool_events": {
+                          "id": "1037",
+                          "type": "ToolEvents"
+                        },
+                        "toolbar": {
+                          "id": "1038",
+                          "type": "Toolbar"
+                        },
+                        "x_range": {
+                          "id": "1041",
+                          "type": "DataRange1d"
+                        },
+                        "y_range": {
+                          "id": "1042",
+                          "type": "DataRange1d"
+                        }
+                      },
+                      "id": "1039",
+                      "subtype": "Figure",
+                      "type": "Plot"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "This is pre. I could put a bunch of code in here perhaps\nOr maybe something else"
+                      },
+                      "id": "1025",
+                      "type": "PreText"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1050",
+                      "type": "WheelZoomTool"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1047",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {
+                        "fill_color": {
+                          "value": "#1f77b4"
+                        },
+                        "line_color": {
+                          "value": "#1f77b4"
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1057",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "completions": [
+                          "one",
+                          "two",
+                          "three"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1034",
+                      "type": "AutocompleteInput"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "This is pre"
+                      },
+                      "id": "1026",
+                      "type": "PreText"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1054",
+                      "type": "HelpTool"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1021",
+                            "type": "Paragraph"
+                          },
+                          {
+                            "id": "1017",
+                            "type": "CheckboxGroup"
+                          },
+                          {
+                            "id": "1018",
+                            "type": "RadioGroup"
+                          },
+                          {
+                            "id": "1019",
+                            "type": "CheckboxButtonGroup"
+                          },
+                          {
+                            "id": "1020",
+                            "type": "RadioButtonGroup"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1022",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "active": 0,
+                        "callback": null,
+                        "labels": [
+                          "Option 1",
+                          "Option 2",
+                          "Option 3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1018",
+                      "type": "RadioGroup"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "Some custom <strong>bold</strong> text"
+                      },
+                      "id": "1023",
+                      "type": "Div"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1011",
+                      "type": "Icon"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1049",
+                      "type": "PanTool"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1029",
+                            "type": "WidgetBox"
+                          },
+                          {
+                            "id": "1036",
+                            "type": "WidgetBox"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1063",
+                      "type": "Row"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "This is pre it's a bit longer and i'm going to constrict it.",
+                        "width": 150
+                      },
+                      "id": "1027",
+                      "type": "PreText"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1061",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {
+                        "dimension": 1,
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1047",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1048",
+                      "type": "Grid"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1062",
+                            "type": "Row"
+                          },
+                          {
+                            "id": "1063",
+                            "type": "Row"
+                          },
+                          {
+                            "id": "1064",
+                            "type": "Row"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1065",
+                      "type": "Column"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1035",
+                            "type": "Paragraph"
+                          },
+                          {
+                            "id": "1030",
+                            "type": "Slider"
+                          },
+                          {
+                            "id": "1031",
+                            "type": "MultiSelect"
+                          },
+                          {
+                            "id": "1032",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1033",
+                            "type": "TextInput"
+                          },
+                          {
+                            "id": "1034",
+                            "type": "AutocompleteInput"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1036",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "default_value": "item_1_value",
+                        "icon": null,
+                        "menu": [
+                          [
+                            "Item 1",
+                            "item_1_value"
+                          ],
+                          [
+                            "Item 2",
+                            "item_2_value"
+                          ]
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1014",
+                      "type": "Dropdown"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1037",
+                      "type": "ToolEvents"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null
+                      },
+                      "id": "1041",
+                      "type": "DataRange1d"
+                    },
+                    {
+                      "attributes": {
+                        "active": [
+                          0,
+                          1
+                        ],
+                        "callback": null,
+                        "labels": [
+                          "Option 1",
+                          "Option 2",
+                          "Option 3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1017",
+                      "type": "CheckboxGroup"
+                    },
+                    {
+                      "attributes": {
+                        "data_source": {
+                          "id": "1056",
+                          "type": "ColumnDataSource"
+                        },
+                        "glyph": {
+                          "id": "1057",
+                          "type": "Circle"
+                        },
+                        "hover_glyph": null,
+                        "nonselection_glyph": {
+                          "id": "1058",
+                          "type": "Circle"
+                        },
+                        "selection_glyph": null
+                      },
+                      "id": "1059",
+                      "type": "GlyphRenderer"
+                    },
+                    {
+                      "attributes": {
+                        "plot": null,
+                        "text": null
+                      },
+                      "id": "1040",
+                      "type": "Title"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1015",
+                            "type": "Paragraph"
+                          },
+                          {
+                            "id": "1012",
+                            "type": "Button"
+                          },
+                          {
+                            "id": "1013",
+                            "type": "Toggle"
+                          },
+                          {
+                            "id": "1014",
+                            "type": "Dropdown"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1016",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1052",
+                      "type": "SaveTool"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1033",
+                      "type": "TextInput"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1061",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1044",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1043",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "active": [
+                          0,
+                          1
+                        ],
+                        "callback": null,
+                        "labels": [
+                          "Option 1",
+                          "Option 2",
+                          "Option 3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1019",
+                      "type": "CheckboxButtonGroup"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1053",
+                      "type": "ResetTool"
+                    },
+                    {
+                      "attributes": {
+                        "fill_alpha": {
+                          "value": 0.1
+                        },
+                        "fill_color": {
+                          "value": "#1f77b4"
+                        },
+                        "line_alpha": {
+                          "value": 0.1
+                        },
+                        "line_color": {
+                          "value": "#1f77b4"
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1058",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {
+                        "overlay": {
+                          "id": "1055",
+                          "type": "BoxAnnotation"
+                        },
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        }
+                      },
+                      "id": "1051",
+                      "type": "BoxZoomTool"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "icon": {
+                          "id": "1011",
+                          "type": "Icon"
+                        },
+                        "label": "Button (with icon)",
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1012",
+                      "type": "Button"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "The bokeh markups"
+                      },
+                      "id": "1028",
+                      "type": "Paragraph"
+                    },
+                    {
+                      "attributes": {
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1044",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1045",
+                      "type": "Grid"
+                    },
+                    {
+                      "attributes": {
+                        "active": 0,
+                        "callback": null,
+                        "labels": [
+                          "Option 1",
+                          "Option 2",
+                          "Option 3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1020",
+                      "type": "RadioButtonGroup"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "The bokeh groups"
+                      },
+                      "id": "1021",
+                      "type": "Paragraph"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1060",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1039",
+                          "subtype": "Figure",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1047",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1046",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null
+                      },
+                      "id": "1042",
+                      "type": "DataRange1d"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1016",
+                            "type": "WidgetBox"
+                          },
+                          {
+                            "id": "1022",
+                            "type": "WidgetBox"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1062",
+                      "type": "Row"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "this is a paragraph"
+                      },
+                      "id": "1024",
+                      "type": "Paragraph"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "The bokeh inputs"
+                      },
+                      "id": "1035",
+                      "type": "Paragraph"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1028",
+                            "type": "Paragraph"
+                          },
+                          {
+                            "id": "1023",
+                            "type": "Div"
+                          },
+                          {
+                            "id": "1024",
+                            "type": "Paragraph"
+                          },
+                          {
+                            "id": "1025",
+                            "type": "PreText"
+                          },
+                          {
+                            "id": "1026",
+                            "type": "PreText"
+                          },
+                          {
+                            "id": "1027",
+                            "type": "PreText"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1029",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "icon": null,
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1013",
+                      "type": "Toggle"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1039",
+                            "subtype": "Figure",
+                            "type": "Plot"
+                          }
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1064",
+                      "type": "Row"
+                    },
+                    {
+                      "attributes": {
+                        "bottom_units": "screen",
+                        "fill_alpha": {
+                          "value": 0.5
+                        },
+                        "fill_color": {
+                          "value": "lightgrey"
+                        },
+                        "left_units": "screen",
+                        "level": "overlay",
+                        "line_alpha": {
+                          "value": 1.0
+                        },
+                        "line_color": {
+                          "value": "black"
+                        },
+                        "line_dash": [
+                          4,
+                          4
+                        ],
+                        "line_width": {
+                          "value": 2
+                        },
+                        "plot": null,
+                        "render_mode": "css",
+                        "right_units": "screen",
+                        "top_units": "screen"
+                      },
+                      "id": "1055",
+                      "type": "BoxAnnotation"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "column_names": [
+                          "y",
+                          "x"
+                        ],
+                        "data": {
+                          "x": [
+                            1,
+                            2
+                          ],
+                          "y": [
+                            2,
+                            3
+                          ]
+                        }
+                      },
+                      "id": "1056",
+                      "type": "ColumnDataSource"
+                    },
+                    {
+                      "attributes": {
+                        "sizing_mode": "stretch_both",
+                        "text": "The bokeh buttons"
+                      },
+                      "id": "1015",
+                      "type": "Paragraph"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1032",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 10,
+                        "sizing_mode": "stretch_both",
+                        "title": "Slider",
+                        "width": 100
+                      },
+                      "id": "1030",
+                      "type": "Slider"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "sizing_mode": "stretch_both"
+                      },
+                      "id": "1031",
+                      "type": "MultiSelect"
+                    },
+                    {
+                      "attributes": {
+                        "active_drag": "auto",
+                        "active_scroll": "auto",
+                        "active_tap": "auto",
+                        "tools": [
+                          {
+                            "id": "1049",
+                            "type": "PanTool"
+                          },
+                          {
+                            "id": "1050",
+                            "type": "WheelZoomTool"
+                          },
+                          {
+                            "id": "1051",
+                            "type": "BoxZoomTool"
+                          },
+                          {
+                            "id": "1052",
+                            "type": "SaveTool"
+                          },
+                          {
+                            "id": "1053",
+                            "type": "ResetTool"
+                          },
+                          {
+                            "id": "1054",
+                            "type": "HelpTool"
+                          }
+                        ]
+                      },
+                      "id": "1038",
+                      "type": "Toolbar"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1044",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1060",
+                      "type": "BasicTickFormatter"
+                    }
+                  ],
+                  "root_ids": [
+                    "1065"
+                  ]
+                },
+                "title": "Bokeh Application",
+                "version": "0.12.0rc2-30-g6db9b23"
+              }
+            };
+            var render_items = [
+              {
+                "docid": "1066",
+                "elementid": "1067",
+                "modelid": "1065"
+              }
+            ];
+            
+            Bokeh.embed.embed_items(docs_json, render_items);
+        });
+        </script>
+    </body>
+</html>

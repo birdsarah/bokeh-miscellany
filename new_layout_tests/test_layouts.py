@@ -5,6 +5,7 @@ from numpy import pi, sin, cos, linspace, tan  # noqa
 from bokeh.util.browser import view
 from bokeh.document import Document
 from bokeh.embed import file_html
+from bokeh.layouts import gridplot
 from bokeh.models.glyphs import Line
 from bokeh.models import (
     Plot, DataRange1d, LinearAxis, ColumnDataSource, Row, Column, PanTool,
@@ -63,7 +64,7 @@ def make_plot(
         plot_height=plot_height,
         min_border=10,
         toolbar_sticky=tbs,
-        responsive='width_ar'
+        sizing_mode='scale_width'
     )
     plot.add_glyph(source, Line(x="x", y=yname, line_color=line_color))
     plot.add_tools(PanTool(), BoxSelectTool(), CrosshairTool(), ResetTool())
@@ -78,7 +79,7 @@ suffix = "_align_plots"
 
 plot_1 = make_plot("y1", "blue", toolbar_location_index=1, border_fill_color="Thistle", tbs=False)
 plot_2 = make_plot("y2", "red", right_axis=True, toolbar_location_index=0)
-plot_3 = make_plot("y3", "green", left_axis=False, below_axis=False, toolbar_location_index=0, plot_width=600, plot_height=400)
+plot_3 = make_plot("y3", "green", left_axis=False, below_axis=False, toolbar_location_index=3, plot_width=600, plot_height=400)
 plot_4 = make_plot("y4", "pink", left_axis=False, below_axis=False, right_axis=True, toolbar_location_index=4)
 plot_5 = make_plot("y4", "purple", left_axis=False, below_axis=False, above_axis=True, toolbar_location_index=2)
 plot_6 = make_plot("y4", "teal", left_axis=False, below_axis=False, toolbar_location_index=3)
@@ -86,22 +87,26 @@ plot_6 = make_plot("y4", "teal", left_axis=False, below_axis=False, toolbar_loca
 all_tools = plot_3.toolbar.tools + plot_2.toolbar.tools
 toolbar = Toolbar(tools=all_tools)
 
-doc.add_root(
-    Column(
-        Row(plot_2, plot_3, responsive='width_ar'),
-        Row(plot_4, plot_5, responsive='width_ar'),
-        responsive='width_ar'
-    )
-)
+#doc.add_root(
+#    gridplot([[plot_3]], sizing_mode='height_ar', toolbar_location='above')
+#)
 
-#doc.add_root(Row(plot_3))
+#doc.add_root(
+#    Column(
+#        Row(plot_2, plot_3, sizing_mode='width_ar'),
+#        Row(plot_4, plot_5, sizing_mode='width_ar'),
+#        sizing_mode='width_ar'
+#    )
+#)
+#
+doc.add_root(Row(plot_3, sizing_mode='scale_width'))
 #doc.add_root(plot_3)
 #doc.add_root(slider_1)
 #col1 = Column(
-#    Row(plot_1, responsive='box'),
-#    Row(plot_2, plot_3, plot_4, responsive='box'),
-#    Row(plot_5, plot_6, responsive='box'),
-#    responsive='box'
+#    Row(plot_1, sizing_mode='box'),
+#    Row(plot_2, plot_3, plot_4, sizing_mode='box'),
+#    Row(plot_5, plot_6, sizing_mode='box'),
+#    sizing_mode='box'
 #)
 #doc.add_root(col1)
 #col2 = Column(plot_3, plot_4)

@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/css/bokeh.css" type="text/css" />
+        
+<script type="text/javascript" src="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/js/bokeh.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("debug");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="plotdiv" id="1066"></div>
+        </div>
+        
+        <script type="text/javascript">
+            Bokeh.$(function() {
+            var docs_json = {
+              "1065": {
+                "roots": {
+                  "references": [
+                    {
+                      "attributes": {},
+                      "id": "1056",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1059",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1034",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1060",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1039",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "plot": null,
+                        "text": "Title left - left",
+                        "title_padding": 10
+                      },
+                      "id": "1045",
+                      "type": "Title"
+                    },
+                    {
+                      "attributes": {
+                        "radius": {
+                          "units": "data",
+                          "value": 0.4
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1036",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1013",
+                      "type": "ToolEvents"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1032",
+                      "type": "ToolEvents"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1014",
+                      "type": "Toolbar"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1062",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1012",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {
+                        "data_source": {
+                          "id": "1010",
+                          "type": "ColumnDataSource"
+                        },
+                        "glyph": {
+                          "id": "1036",
+                          "type": "Circle"
+                        },
+                        "hover_glyph": null,
+                        "nonselection_glyph": null,
+                        "selection_glyph": null
+                      },
+                      "id": "1037",
+                      "type": "GlyphRenderer"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1061",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {
+                        "data_source": {
+                          "id": "1010",
+                          "type": "ColumnDataSource"
+                        },
+                        "glyph": {
+                          "id": "1046",
+                          "type": "Circle"
+                        },
+                        "hover_glyph": null,
+                        "nonselection_glyph": null,
+                        "selection_glyph": null
+                      },
+                      "id": "1047",
+                      "type": "GlyphRenderer"
+                    },
+                    {
+                      "attributes": {
+                        "radius": {
+                          "units": "data",
+                          "value": 0.4
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1017",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1061",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1044",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1062",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1048",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "plot_height": 200,
+                        "plot_width": 400,
+                        "renderers": [
+                          {
+                            "id": "1027",
+                            "type": "GlyphRenderer"
+                          },
+                          {
+                            "id": "1028",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1029",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "right": [
+                          {
+                            "id": "1028",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1029",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "title": {
+                          "id": "1025",
+                          "type": "Title"
+                        },
+                        "title_location": "right",
+                        "tool_events": {
+                          "id": "1022",
+                          "type": "ToolEvents"
+                        },
+                        "toolbar": {
+                          "id": "1023",
+                          "type": "Toolbar"
+                        },
+                        "toolbar_location": null,
+                        "x_range": {
+                          "id": "1020",
+                          "type": "Range1d"
+                        },
+                        "y_range": {
+                          "id": "1021",
+                          "type": "Range1d"
+                        }
+                      },
+                      "id": "1024",
+                      "type": "Plot"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "column_names": [
+                          "y",
+                          "x"
+                        ],
+                        "data": {
+                          "x": [
+                            1,
+                            2
+                          ],
+                          "y": [
+                            1,
+                            2
+                          ]
+                        }
+                      },
+                      "id": "1010",
+                      "type": "ColumnDataSource"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1011",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {
+                        "plot": null,
+                        "text": "Title right - right",
+                        "title_align": "right",
+                        "title_padding": 10
+                      },
+                      "id": "1025",
+                      "type": "Title"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1055",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1024",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1056",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1029",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1022",
+                      "type": "ToolEvents"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1041",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {
+                        "plot": null,
+                        "text": "Title below - center",
+                        "title_align": "center",
+                        "title_padding": 10
+                      },
+                      "id": "1035",
+                      "type": "Title"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1051",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1015",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1052",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1019",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "data_source": {
+                          "id": "1010",
+                          "type": "ColumnDataSource"
+                        },
+                        "glyph": {
+                          "id": "1026",
+                          "type": "Circle"
+                        },
+                        "hover_glyph": null,
+                        "nonselection_glyph": null,
+                        "selection_glyph": null
+                      },
+                      "id": "1027",
+                      "type": "GlyphRenderer"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1057",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1023",
+                      "type": "Toolbar"
+                    },
+                    {
+                      "attributes": {
+                        "plot": null,
+                        "text": "Title above - left",
+                        "title_padding": 10
+                      },
+                      "id": "1016",
+                      "type": "Title"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1058",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1040",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1053",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1054",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {
+                        "data_source": {
+                          "id": "1010",
+                          "type": "ColumnDataSource"
+                        },
+                        "glyph": {
+                          "id": "1017",
+                          "type": "Circle"
+                        },
+                        "hover_glyph": null,
+                        "nonselection_glyph": null,
+                        "selection_glyph": null
+                      },
+                      "id": "1018",
+                      "type": "GlyphRenderer"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1042",
+                      "type": "ToolEvents"
+                    },
+                    {
+                      "attributes": {
+                        "above": [
+                          {
+                            "id": "1019",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "plot_height": 200,
+                        "plot_width": 400,
+                        "renderers": [
+                          {
+                            "id": "1018",
+                            "type": "GlyphRenderer"
+                          },
+                          {
+                            "id": "1019",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "title": {
+                          "id": "1016",
+                          "type": "Title"
+                        },
+                        "tool_events": {
+                          "id": "1013",
+                          "type": "ToolEvents"
+                        },
+                        "toolbar": {
+                          "id": "1014",
+                          "type": "Toolbar"
+                        },
+                        "toolbar_location": null,
+                        "x_range": {
+                          "id": "1011",
+                          "type": "Range1d"
+                        },
+                        "y_range": {
+                          "id": "1012",
+                          "type": "Range1d"
+                        }
+                      },
+                      "id": "1015",
+                      "type": "Plot"
+                    },
+                    {
+                      "attributes": {
+                        "radius": {
+                          "units": "data",
+                          "value": 0.4
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1026",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1063",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1044",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1064",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1049",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "radius": {
+                          "units": "data",
+                          "value": 0.4
+                        },
+                        "x": {
+                          "field": "x"
+                        },
+                        "y": {
+                          "field": "y"
+                        }
+                      },
+                      "id": "1046",
+                      "type": "Circle"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1015",
+                            "type": "Plot"
+                          },
+                          {
+                            "id": "1024",
+                            "type": "Plot"
+                          },
+                          {
+                            "id": "1034",
+                            "type": "Plot"
+                          },
+                          {
+                            "id": "1044",
+                            "type": "Plot"
+                          }
+                        ]
+                      },
+                      "id": "1050",
+                      "type": "Column"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1053",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1024",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1054",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1028",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "formatter": {
+                          "id": "1057",
+                          "type": "BasicTickFormatter"
+                        },
+                        "plot": {
+                          "id": "1034",
+                          "type": "Plot"
+                        },
+                        "ticker": {
+                          "id": "1058",
+                          "type": "BasicTicker"
+                        }
+                      },
+                      "id": "1038",
+                      "type": "LinearAxis"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1031",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {
+                        "left": [
+                          {
+                            "id": "1048",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1049",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "plot_height": 200,
+                        "plot_width": 400,
+                        "renderers": [
+                          {
+                            "id": "1047",
+                            "type": "GlyphRenderer"
+                          },
+                          {
+                            "id": "1048",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1049",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "title": {
+                          "id": "1045",
+                          "type": "Title"
+                        },
+                        "title_location": "left",
+                        "tool_events": {
+                          "id": "1042",
+                          "type": "ToolEvents"
+                        },
+                        "toolbar": {
+                          "id": "1043",
+                          "type": "Toolbar"
+                        },
+                        "toolbar_location": null,
+                        "x_range": {
+                          "id": "1040",
+                          "type": "Range1d"
+                        },
+                        "y_range": {
+                          "id": "1041",
+                          "type": "Range1d"
+                        }
+                      },
+                      "id": "1044",
+                      "type": "Plot"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1020",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1059",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {
+                        "below": [
+                          {
+                            "id": "1038",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1039",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "plot_height": 200,
+                        "plot_width": 400,
+                        "renderers": [
+                          {
+                            "id": "1037",
+                            "type": "GlyphRenderer"
+                          },
+                          {
+                            "id": "1038",
+                            "type": "LinearAxis"
+                          },
+                          {
+                            "id": "1039",
+                            "type": "LinearAxis"
+                          }
+                        ],
+                        "title": {
+                          "id": "1035",
+                          "type": "Title"
+                        },
+                        "title_location": "below",
+                        "tool_events": {
+                          "id": "1032",
+                          "type": "ToolEvents"
+                        },
+                        "toolbar": {
+                          "id": "1033",
+                          "type": "Toolbar"
+                        },
+                        "toolbar_location": null,
+                        "x_range": {
+                          "id": "1030",
+                          "type": "Range1d"
+                        },
+                        "y_range": {
+                          "id": "1031",
+                          "type": "Range1d"
+                        }
+                      },
+                      "id": "1034",
+                      "type": "Plot"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1043",
+                      "type": "Toolbar"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1060",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1033",
+                      "type": "Toolbar"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1021",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1051",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1063",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 2
+                      },
+                      "id": "1030",
+                      "type": "Range1d"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1052",
+                      "type": "BasicTicker"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1055",
+                      "type": "BasicTickFormatter"
+                    },
+                    {
+                      "attributes": {},
+                      "id": "1064",
+                      "type": "BasicTicker"
+                    }
+                  ],
+                  "root_ids": [
+                    "1050"
+                  ]
+                },
+                "title": "Bokeh Application",
+                "version": "0.12.0dev10-25-ga55e1d9-dirty"
+              }
+            };
+            var render_items = [
+              {
+                "docid": "1065",
+                "elementid": "1066",
+                "modelid": "1050"
+              }
+            ];
+            
+            Bokeh.embed.embed_items(docs_json, render_items);
+        });
+        </script>
+    </body>
+</html>

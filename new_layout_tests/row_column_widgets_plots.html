@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Widgets and plots in rows and columns.</title>
+        
+<link rel="stylesheet" href="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/css/bokeh.css" type="text/css" />
+<link rel="stylesheet" href="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/css/bokeh-widgets.css" type="text/css" />
+        
+<script type="text/javascript" src="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/js/bokeh.js"></script>
+<script type="text/javascript" src="/Users/caged/Dev/bokeh/bokeh/bokeh/../bokehjs/build/js/bokeh-widgets.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("debug");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="plotdiv" id="1116"></div>
+        </div>
+        
+        <script type="text/javascript">
+            Bokeh.$(function() {
+            var docs_json = {
+              "1115": {
+                "roots": {
+                  "references": [
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1104",
+                            "type": "WidgetBox"
+                          },
+                          {
+                            "id": "1111",
+                            "type": "WidgetBox"
+                          }
+                        ]
+                      },
+                      "id": "1113",
+                      "type": "Row"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1086",
+                            "type": "Slider"
+                          },
+                          {
+                            "id": "1085",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1087",
+                            "type": "TextInput"
+                          },
+                          {
+                            "id": "1088",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1089",
+                            "type": "Select"
+                          }
+                        ],
+                        "width": 400
+                      },
+                      "id": "1090",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1100",
+                            "type": "Slider"
+                          },
+                          {
+                            "id": "1099",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1101",
+                            "type": "TextInput"
+                          },
+                          {
+                            "id": "1102",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1103",
+                            "type": "Select"
+                          }
+                        ],
+                        "width": 400
+                      },
+                      "id": "1104",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "options": [
+                          "All",
+                          "Action",
+                          "DramaDramaDrama",
+                          "Comedy"
+                        ],
+                        "title": "Genre",
+                        "value": "All",
+                        "width": 100
+                      },
+                      "id": "1085",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 4,
+                        "height": 100,
+                        "step": 1,
+                        "title": "Minimum number of Oscar wins",
+                        "value": 0,
+                        "width": 100
+                      },
+                      "id": "1093",
+                      "type": "Slider"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1112",
+                            "type": "Row"
+                          },
+                          {
+                            "id": "1113",
+                            "type": "Row"
+                          }
+                        ]
+                      },
+                      "id": "1114",
+                      "type": "Column"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1107",
+                            "type": "Slider"
+                          },
+                          {
+                            "id": "1106",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1108",
+                            "type": "TextInput"
+                          },
+                          {
+                            "id": "1109",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1110",
+                            "type": "Select"
+                          }
+                        ],
+                        "width": 400
+                      },
+                      "id": "1111",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "title": "Director name contains a whole.",
+                        "width": 150
+                      },
+                      "id": "1101",
+                      "type": "TextInput"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 4,
+                        "height": 100,
+                        "step": 1,
+                        "title": "Minimum number of Oscar wins",
+                        "value": 0,
+                        "width": 100
+                      },
+                      "id": "1100",
+                      "type": "Slider"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "options": [
+                          "All",
+                          "Action",
+                          "DramaDramaDrama",
+                          "Comedy"
+                        ],
+                        "title": "Genre",
+                        "value": "All",
+                        "width": 100
+                      },
+                      "id": "1099",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "Y Axis",
+                        "value": "Number of Reviews"
+                      },
+                      "id": "1103",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "title": "Director name contains a whole.",
+                        "width": 150
+                      },
+                      "id": "1108",
+                      "type": "TextInput"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 4,
+                        "height": 100,
+                        "step": 1,
+                        "title": "Minimum number of Oscar wins",
+                        "value": 0,
+                        "width": 100
+                      },
+                      "id": "1086",
+                      "type": "Slider"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "X Axis",
+                        "value": "Tomato Meter"
+                      },
+                      "id": "1088",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "Y Axis",
+                        "value": "Number of Reviews"
+                      },
+                      "id": "1096",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "X Axis",
+                        "value": "Tomato Meter"
+                      },
+                      "id": "1102",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "title": "Director name contains a whole.",
+                        "width": 150
+                      },
+                      "id": "1087",
+                      "type": "TextInput"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "options": [
+                          "All",
+                          "Action",
+                          "DramaDramaDrama",
+                          "Comedy"
+                        ],
+                        "title": "Genre",
+                        "value": "All",
+                        "width": 100
+                      },
+                      "id": "1092",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "Y Axis",
+                        "value": "Number of Reviews"
+                      },
+                      "id": "1089",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "X Axis",
+                        "value": "Tomato Meter"
+                      },
+                      "id": "1095",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "end": 4,
+                        "height": 100,
+                        "step": 1,
+                        "title": "Minimum number of Oscar wins",
+                        "value": 0,
+                        "width": 100
+                      },
+                      "id": "1107",
+                      "type": "Slider"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1093",
+                            "type": "Slider"
+                          },
+                          {
+                            "id": "1092",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1094",
+                            "type": "TextInput"
+                          },
+                          {
+                            "id": "1095",
+                            "type": "Select"
+                          },
+                          {
+                            "id": "1096",
+                            "type": "Select"
+                          }
+                        ],
+                        "width": 400
+                      },
+                      "id": "1097",
+                      "type": "WidgetBox"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "options": [
+                          "All",
+                          "Action",
+                          "DramaDramaDrama",
+                          "Comedy"
+                        ],
+                        "title": "Genre",
+                        "value": "All",
+                        "width": 100
+                      },
+                      "id": "1106",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "X Axis",
+                        "value": "Tomato Meter"
+                      },
+                      "id": "1109",
+                      "type": "Select"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "height": 100,
+                        "title": "Director name contains a whole.",
+                        "width": 150
+                      },
+                      "id": "1094",
+                      "type": "TextInput"
+                    },
+                    {
+                      "attributes": {
+                        "children": [
+                          {
+                            "id": "1090",
+                            "type": "WidgetBox"
+                          },
+                          {
+                            "id": "1097",
+                            "type": "WidgetBox"
+                          }
+                        ]
+                      },
+                      "id": "1112",
+                      "type": "Row"
+                    },
+                    {
+                      "attributes": {
+                        "callback": null,
+                        "options": [
+                          "Tomato Meter",
+                          "Number of Review",
+                          "Dollars at box office"
+                        ],
+                        "title": "Y Axis",
+                        "value": "Number of Reviews"
+                      },
+                      "id": "1110",
+                      "type": "Select"
+                    }
+                  ],
+                  "root_ids": [
+                    "1114"
+                  ]
+                },
+                "title": "Bokeh Application",
+                "version": "0.12.0rc2-19-g5be2c4e-dirty"
+              }
+            };
+            var render_items = [
+              {
+                "docid": "1115",
+                "elementid": "1116",
+                "modelid": null
+              }
+            ];
+            
+            Bokeh.embed.embed_items(docs_json, render_items);
+        });
+        </script>
+    </body>
+</html>

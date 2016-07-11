@@ -15,6 +15,7 @@ def make_plot(location, title_align, two_axes=True):
         title="Title %s - %s" % (location, title_align), title_location=location,
     )
     plot.title.title_align = title_align
+    plot.title.title_padding = 10
     plot.add_glyph(source, Circle(x='x', y='y', radius=0.4))
     plot.add_layout(LinearAxis(), location)
     if two_axes:
@@ -24,8 +25,8 @@ def make_plot(location, title_align, two_axes=True):
 layout = Column(
     make_plot('above', 'left', two_axes=False),  # This is a workaround top doesn't like two axes
     make_plot('right', 'right'),
-    make_plot('below', 'center'), # NOTE THIS HAS A BUG!!!
-    make_plot('left', 'left')
+    make_plot('below', 'center'),
+    make_plot('left', 'left'),
 )
 
 show(layout)

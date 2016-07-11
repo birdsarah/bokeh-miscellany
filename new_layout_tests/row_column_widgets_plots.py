@@ -5,6 +5,7 @@ from numpy import pi, sin, cos, linspace, tan  # noqa
 from bokeh.util.browser import view
 from bokeh.document import Document
 from bokeh.embed import file_html
+from bokeh.layouts import layout, gridplot, row, column, widgetbox
 from bokeh.models.glyphs import Line
 from bokeh.models import (
     Plot, DataRange1d, LinearAxis, ColumnDataSource, Row, Column, PanTool,
@@ -25,12 +26,12 @@ source = ColumnDataSource(data=dict(
 ))
 
 
-def make_plot(responsive):
+def make_plot(sizing_mode):
     plot = Plot(
         x_range=DataRange1d(),
         y_range=DataRange1d(),
         toolbar_location=None,
-        responsive=responsive
+        sizing_mode=sizing_mode
     )
     plot.add_glyph(source, Line(x="x", y="y1"))
     plot.add_layout(LinearAxis(), 'below')
@@ -38,21 +39,24 @@ def make_plot(responsive):
     return plot
 
 
-def make_wb(responsive):
-    w1 = make_widgets()
+def make_wb(sizing_mode):
+    w1 = make_widgets(sizing_mode)
     wb = WidgetBox(
         children=[w1['oscars'], w1['genre'], w1['director'], w1['x_axis'], w1['y_axis']],
-        responsive=responsive,
+        sizing_mode=sizing_mode,
+        width=400,
     )
     return wb
 
-responsive = 'fixed'
+sizing_mode = 'fixed'
 
-plot = make_plot(responsive)
-wb = make_wb(responsive)
-w1 = make_widgets(responsive)
+plot = make_plot(sizing_mode)
+wb = make_wb(sizing_mode)
+w1 = make_widgets(sizing_mode)
+wb2 = make_wb(sizing_mode)
 
-layout = Row(wb, plot, responsive=responsive)
+#layout = Row(wb, wb2, sizing_mode=sizing_mode)
+layout = layout([[make_wb(sizing_mode), make_wb(sizing_mode)], [make_wb(sizing_mode), make_wb(sizing_mode)]], sizing_mode=sizing_mode)
 
 doc = Document()
 doc.add_root(layout)

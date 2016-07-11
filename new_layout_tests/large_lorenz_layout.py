@@ -1,7 +1,8 @@
 import numpy as np
 
-from bokeh.models import CustomJS, Slider, Row, Column, ColumnDataSource, WidgetBox
+from bokeh.models import CustomJS, Slider, ColumnDataSource, WidgetBox
 from bokeh.plotting import figure, output_file, show
+from bokeh.layouts import layout
 
 from scipy.integrate import odeint
 
@@ -35,4 +36,4 @@ def lorenz():
     return p
 
 output_file('large_lorenz.html')
-show(Column(lorenz(), lorenz(), lorenz()))
+show(layout([[lorenz()], [lorenz()], [lorenz()]]))

@@ -19,6 +19,7 @@ def p():
     p.logo = 'grey'
     p.title = 'Color Scatter 1'
     p.title_location = 'right'
+
     p.scatter(x, y, radius=radii, fill_color=colors, fill_alpha=0.6, line_color=None)
     return p
 
@@ -29,8 +30,8 @@ layout = GridPlot(
         [p(), p(), p(), p()],
         [p(), p(), p(), p()],
     ],
-    toolbar_location='left',
-    responsive='box'
+    toolbar_location=None,
+    sizing_mode='stretch_both'
 )
 
 toolbar_locations = [None, 'above', 'right', 'below', 'left']
@@ -43,4 +44,4 @@ tb = 1
 #    toolbar_location=toolbar_locations[tb],
 #    responsive='fixed'
 #)
-show(p())
+show(layout)
